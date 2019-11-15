@@ -1,0 +1,77 @@
+.feedBack{
+    background-color: $color-gray-5;
+    border-bottom: 1px solid $color-gray-6;
+    h2{
+        @include styleText($color-black-0,$fs-3,$fw-bold-0);
+    }
+    .feedBack__top{
+        .top__content{
+            padding: 5px 10px;
+            .top__items{
+                padding: 32px;
+                text-align: left;
+                background-color: $color-white-0;
+                box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+                border-radius: 3px;
+                .top__img{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: $fs-2 - 2;
+                    img{
+                        border-radius: 50%;
+                        margin-right: 20px;
+                        width: 64px;
+                        height: 64px;
+                    }
+                    span{
+                        @include styleText($color-black-0,$fs-0 + 1,$fw-bold-0);
+                    }
+                }
+                p{
+                    @include styleText($color-black-0,$fs-0 + 1,$fw-normal);
+                }
+            }
+        }
+    }
+    .feedBack__bot{
+        text-align: center;
+        p:nth-child(1){
+            padding-top: 20px;
+            @include styleText($color-black-0,$fs-1,$fw-normal);
+        }
+        .feedBack__logo{
+            justify-content: space-around;
+            padding: 32px 0;
+        }
+        .feedBack__teach{
+            border-right: 1px solid $color-gray-6;
+            @include mediaQuery('medium'){
+                border-right: none;
+                border-bottom: 1px solid $color-gray-6;
+            }
+        }
+        .feedBack__teach,.feedBack__business{
+            padding: 20px;
+            margin: 20px 0;
+            a{
+                text-decoration: none;
+                @include styleText($color-black-0,$fs-2 - 1,$fw-bold-0);
+            }
+            p{
+
+                @include styleText($color-black-0,$fs-1 + 3,$fw-normal);
+            }
+            button{
+                border-radius: 2px;
+                background-color: $color-red-0;
+                border-color: $color-red-0;
+                padding: 8px;
+                color: $color-white-0;
+                &:hover{
+                    background-color: $color-red-2;
+                    border-color: $color-red-2;
+                }
+            }
+        }
+    }
+}

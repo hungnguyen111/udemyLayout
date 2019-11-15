@@ -1,0 +1,40 @@
+.getStated{
+    background-color: $color-black-0;
+    border-top: 5px solid $color-red-0;
+    color: $color-white-0;
+    i{
+        color: $color-white-0;
+        font-size: 32px;
+        @include mediaQuery('large'){
+            display: none;
+        }
+    }
+    .getStated__top{
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding-top: 50px;
+        
+    }
+    .getStated__mid{
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        padding: 40px 0;
+        button{
+            border-radius: 2px;
+            background-color: $color-red-0;
+            border-color: $color-red-0;
+            padding: 8px;
+            &:hover{
+                background-color: $color-red-2;
+                border-color: $color-red-2;
+            }
+        }
+    }
+    .getStated__bot{
+        padding-bottom: 50px;
+        justify-content: space-around;
+        text-align: center;
+    }
+}

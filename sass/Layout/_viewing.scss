@@ -1,0 +1,33 @@
+.viewing__content{
+    .card{
+        cursor: pointer;
+        box-shadow: 0 0 2px 2px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+        .card-body{
+            padding: 10px 20px;
+            .card-title{
+                @include styleText($color-black-0,$fs-0,$fw-bold-0);
+            }
+            .card-text{
+                @include styleText($color-black-0,$fs-1 - 1,$fw-normal);
+            }
+        }
+        .course__star{
+            padding-left: 15px;
+            i{
+                font-size: 13px;
+                color: $color-yellow;
+            }
+            span:nth-child(6){
+                @include styleText($color-black-0,$fs-1,$fw-bold-0);
+            }
+            span:nth-child(7){
+                @include styleText($color-black-0,$fs-1 - 1,$fw-normal);
+            }
+        }
+        .course__price{
+            padding: 10px 20px;
+            text-align: right;
+            @include styleText($color-black-0,$fs-2 - 2,$fw-bold-0);
+        }
+    }
+}

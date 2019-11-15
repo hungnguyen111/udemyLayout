@@ -1,0 +1,86 @@
+.course{
+    .course__left{
+        padding: 20px 32px;
+        display: block;
+        background: #f7f8fa;
+        height: 370px;
+        @include mediaQuery('large'){
+            display: none;
+        }
+        h3{
+            padding-top: 100px;
+            @include styleText(black,20px,600);
+        }
+        p{
+            @include styleText(black,16px,normal);
+        }
+    }
+    .course__right{
+        .nav{
+            flex-wrap: nowrap;
+        }
+        .nav-tabs{
+            justify-content: space-between;
+            .nav-item{
+                &:hover{
+                    .nav-link{
+                        border: none;
+                    }
+                }
+                .nav-link.active{
+                    padding-bottom: 25px;
+                    border: none;
+                    border-bottom: 5px solid $color-blue;
+                }
+                .nav-link{
+                    text-decoration: none;
+                    border: none;
+                    color: black;
+                }
+            }
+            .nav-item:nth-child(6),.nav-item:nth-child(7){
+                .nav-link.active{
+                    padding-bottom: 2px;
+                }
+            }
+        }
+        .tab-content{
+            .course__items{
+                margin-top: 20px;
+                position: relative;
+                flex-wrap: nowrap;
+                .card{
+                    cursor: pointer;
+                    box-shadow: 0 0 2px 2px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                    .card-body{
+                        padding: 10px 20px;
+                        .card-title{
+                            @include styleText($color-black-0,$fs-0,$fw-bold-0);
+                        }
+                        .card-text{
+                            @include styleText($color-black-0,$fs-1 - 1,$fw-normal);
+                        }
+                    }
+                    .course__star{
+                        padding-left: 15px;
+                        i{
+                            font-size: 13px;
+                            color: $color-yellow;
+                        }
+                        span:nth-child(6){
+                            @include styleText($color-black-0,$fs-1,$fw-bold-0);
+                        }
+                        span:nth-child(7){
+                            @include styleText($color-black-0,$fs-1 - 1,$fw-normal);
+                        }
+                    }
+                    .course__price{
+                        padding: 10px 20px;
+                        text-align: right;
+                        @include styleText($color-black-0,$fs-2 - 2,$fw-bold-0);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.topCategories{
+    h2{
+        @include styleText($color-black-0,$fs-3,$fw-bold-0);
+    }
+    .categories__top,.categories__bot{
+        .categories__content{
+            padding: 10px 15px;
+            .categories__items{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                padding: $fs-0;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                i{
+                    font-size: 32px;
+                    padding-right: $fs-0 + 1;
+                }
+                span{
+                    font-size: $fs-0;
+                    line-height: 32px;
+                }
+                &:hover{
+                    box-shadow: 0 0 3px 3px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                }
+            }
+        }
+    }
+}
